@@ -2,9 +2,11 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Visualização de Personagens</title>
   <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -13,6 +15,9 @@
       color: #f0f0f0;
       margin: 0;
       padding: 40px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .container {
@@ -82,17 +87,52 @@
     tr:last-child td {
       border-bottom: none;
     }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+
+      h2 {
+        font-size: 2.5em;
+      }
+
+      .card {
+        padding: 15px;
+        margin: 15px 0;
+      }
+    }
+
+    .btn-export {
+      background-color: #800000;
+      color: #f0f0f0;
+      font-size: 1.2em;
+      border: 2px solid gold;
+      padding: 15px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .btn-export:hover {
+      background-color: #a52a2a;
+      border-color: #ffd700;
+    }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <h2>Personagens</h2>
+  <h2>Lista de Usuários</h2>
   <select id="personagemSelect" onchange="mostrarDetalhes(this.value)">
-    <option value="">Selecione um personagem</option>
+    <option value="">Selecione um Usuário</option>
   </select>
 
   <div id="detalhesPersonagem" class="container"></div>
+
+  <!-- Button to export the details to PDF -->
+  <button id="btnExport" class="btn-export" style="display:none" onclick="exportarPDF()">Exportar PDF</button>
 </div>
 
 <script>
@@ -110,6 +150,7 @@
   const db = firebase.database().ref("personagens");
   const select = document.getElementById("personagemSelect");
   const detalhes = document.getElementById("detalhesPersonagem");
+  const btnExport = document.getElementById("btnExport");
 
   db.once("value", snapshot => {
     snapshot.forEach(child => {
@@ -135,6 +176,7 @@
   function mostrarDetalhes(id) {
     if (!id) {
       detalhes.innerHTML = "";
+      btnExport.style.display = 'none';
       return;
     }
 
@@ -214,6 +256,22 @@
       }));
 
       detalhes.innerHTML = cards.join("");
+      btnExport.style.display = 'block';
+    });
+  }
+
+  function exportarPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    
+    let content = detalhes.innerHTML;
+
+    // Adicionar conteúdo ao PDF
+    doc.html(content, {
+      callback: function (doc) {
+        doc.save('detalhes_personagem.pdf');
+      },
+      margin: [10, 10, 10, 10]
     });
   }
 </script>
