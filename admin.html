@@ -7,7 +7,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* Estilos Gerais */
+/* Estilos Gerais */
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #0a0a0a;
@@ -20,7 +20,7 @@ body {
 }
 
 h2 {
-  font-size: 3.5em;
+  font-size: 2.5em; /* Ajustando para um tamanho consistente com a página users.html */
   margin-bottom: 30px;
   color: gold;
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
@@ -32,14 +32,14 @@ h2 {
   border: 2px solid gold;
   border-radius: 12px;
   margin: 15px 0;
-  padding: 25px 30px;
-  max-width: 600px;
+  padding: 20px 30px;
   width: 100%;
+  max-width: 700px; /* Definindo largura máxima igual ao layout de users.html */
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.3em; /* Ajuste para ficar com a mesma hierarquia de tamanho */
   margin-bottom: 20px;
   color: #fff;
   border-bottom: 1px solid gold;
@@ -50,20 +50,20 @@ label {
   display: block;
   margin-top: 12px;
   font-weight: 600;
-  font-size: 0.95em;
+  font-size: 1em;
   color: #e0e0e0;
 }
 
 input {
   width: 96%;
-  padding: 10px;
+  padding: 12px; /* Ajuste para aumentar a altura do input */
   margin-top: 4px;
   border-radius: 6px;
   border: 1px solid #333;
   background-color: #1a1a1a;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.95em;
+  font-size: 1em;
   transition: border 0.3s;
 }
 
@@ -93,7 +93,7 @@ button:hover {
 }
 
 #listaPersonagens {
-  max-width: 600px;
+  max-width: 700px; /* Consistência com a largura das cards */
   width: 100%;
   margin-top: 40px;
 }
@@ -146,7 +146,7 @@ button:hover {
   }
 
   h2 {
-    font-size: 2.5em;
+    font-size: 2em; /* Ajuste para garantir que o título ainda fique proporcional */
   }
 
   .card {
@@ -159,35 +159,35 @@ button:hover {
   }
 
   label {
-    font-size: 0.85em;
+    font-size: 0.95em;
   }
 
   input {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
   button {
     padding: 12px 25px;
-    font-size: 0.9em;
-  }
-
-  .personagem-info strong {
     font-size: 1em;
   }
 
+  .personagem-info strong {
+    font-size: 1.1em;
+  }
+
   .personagem-info span {
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
 
   .botoes-horizontal button {
     padding: 10px 30px;
-    font-size: 0.9em;
+    font-size: 1em;
   }
 }
 
 @media (max-width: 480px) {
   h2 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   .card {
@@ -199,29 +199,29 @@ button:hover {
   }
 
   label {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 
   input {
-    font-size: 0.85em;
+    font-size: 0.95em;
   }
 
   button {
     padding: 12px 20px;
-    font-size: 0.85em;
+    font-size: 0.95em;
   }
 
   .personagem-info strong {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
   .personagem-info span {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
 
   .botoes-horizontal button {
     padding: 10px 20px;
-    font-size: 0.85em;
+    font-size: 0.95em;
   }
 }
   </style>
