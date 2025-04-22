@@ -156,7 +156,7 @@
     snapshot.forEach(child => {
       const p = child.val();
       const id = child.key;
-      const nome = p.nomeCompleto || "Sem Nome";
+      const nome = p.nomecompleto || "***";
       const option = document.createElement("option");
       option.value = id;
       option.textContent = nome;
