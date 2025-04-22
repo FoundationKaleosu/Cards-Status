@@ -1,8 +1,10 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Cadastro de Personagens</title>
+  <title>Registro de Personagens</title>
   <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -56,7 +58,7 @@ label {
 
 input {
   width: 96%;
-  padding: 12px; /* Ajuste para aumentar a altura do input */
+  padding: 8px; /* Ajuste para aumentar a altura do input */
   margin-top: 4px;
   border-radius: 6px;
   border: 1px solid #333;
@@ -228,13 +230,13 @@ button:hover {
 </head>
 <body>
 
-<h2>Cadastro de Personagens</h2>
+<h2>Registro de Personagem</h2>
 
 <!-- Chave Mestra -->
 <div class="card">
   <h3>Autenticação</h3>
-  <label>Chave Mestra</label>
-  <input type="password" id="chaveMestra" placeholder="Digite a chave mestra" />
+  <label>Senha Mestra</label>
+  <input type="password" id="chaveMestra" placeholder="Digite a Chave Mestra" />
   
 </div>
 
@@ -242,97 +244,343 @@ button:hover {
 <div class="card">
   <h3>Identificação do Usuário</h3>
   <label>ID</label>
-  <input type="text" id="personagemId" placeholder="Deixar vazio para novo cadastro" />
+  <input type="text" id="personagemId" placeholder="Data de Aniversário" />
 </div>
+
+<h2>Estatísticas Pessoais</h2>
 
 <!-- Card 02: Informações Pessoais -->
 <div class="card">
   <h3>Informações Pessoais</h3>
-  <label>Nome Completo</label><input type="text" id="nomeCompleto" />
-  <label>Idade</label><input type="text" id="idade" />
-  <label>Reino de Origem</label><input type="text" id="reinoOrigem" />
-  <label>Mundo de Origem</label><input type="text" id="mundoOrigem" />
-  <label>Reino onde vive Atualmente</label><input type="text" id="reinoAtual" />
+  <label>Nome Completo</label><input type="text" id="nomecompleto" />
+<label>Apelido</label><input type="text" id="apelido" />
+<label>Idade</label><input type="text" id="idade" />
+<label>Niktro</label><input type="text" id="niktro" />
+<label>Gênero</label><input type="text" id="genero" />
+<label>Opção Sexual</label><input type="text" id="opcaosexual" />
+<label>Religião</label><input type="text" id="religião" />
+<label>É o Famíliar de Alguém?</label><input type="text" id="familiar" />
 </div>
 
-<!-- Card 03: Status Básicos -->
 <div class="card">
-  <h3>Status Básicos</h3>
-  <label>Ameaça</label><input type="text" id="ameaca" />
-  <label>Comunicação</label><input type="text" id="comunicacao" />
-  <label>Conhecimento</label><input type="text" id="conhecimento" />
-  <label>Desafio</label><input type="text" id="desafio" />
-  <label>Destruição</label><input type="text" id="destruicao" />
-  <label>Importância</label><input type="text" id="importancia" />
-  <label>Imortalidade</label><input type="text" id="imortalidade" />
-  <label>Influência</label><input type="text" id="influencia" />
-  <label>Meritocracia</label><input type="text" id="meritocracia" />
-  <label>Nível de XP</label><input type="text" id="xp" />
-  <label>Nível de Procurado</label><input type="text" id="procurado" />
-  <label>Regeneração</label><input type="text" id="regeneracao" />
-  <label>Proficiência</label><input type="text" id="proficiencia" />
+  <h3>Data de Nascimento</h3>
+<label>Ethernnium</label><input type="text" id="ethernnium" />
+<label>Era</label><input type="text" id="era" />
+<label>Período</label><input type="text" id="periodo" />
+<label>Subperíodo</label><input type="text" id="subperiodo" />
+<label>Ano</label><input type="text" id="ano" />
+<label>Mês</label><input type="text" id="mes" />
+<label>Dia</label><input type="text" id="dia" />
 </div>
 
-<!-- Card 04: Ranking & Categoria -->
+
 <div class="card">
-  <h3>Ranking & Categoria</h3>
-  <label>Ranking</label><input type="text" id="ranking" />
-  <label>Categoria</label><input type="text" id="categoria" />
+  <h3>Local de Origem</h3>
+<label>Reino Originário</label><input type="text" id="reinorigem" />
+<label>Mundo</label><input type="text" id="Mundo" />
+<label>Reino Atual</label><input type="text" id="reinoatual" />
 </div>
 
-<!-- Card 05: Hierarquia -->
-  <div class="card">
-  <h3>Hierarquia</h3>
-  <label>Hierarquia Niktronial</label><input type="text" id="hierniktronial" />
-  <label>Hierarquia Militar</label><input type="text" id="hiermilitar" />
-  <label>Hierarquia Multiversal</label><input type="text" id="hiermultiversal" />
-</div>
+<h2>Estatísticas Mágicas</h2>
 
-<!-- Card 06: Nível de Poder -->
+<!-- Card 03: Estatísticas Mágicas -->
 <div class="card">
-  <h3>Nível de Poder</h3>
-  <label>Classe</label><input type="text" id="classe" />
-  <label>Poder Mágico</label><input type="text" id="magico" />
-  <label>Poder Físico</label><input type="text" id="fisico" />
-  <label>Poder Espiritual</label><input type="text" id="espiritual" />
-  <label>Poder Psíquico</label><input type="text" id="psiquico" />
-  <label>Poder Aurático</label><input type="text" id="auratico" />
-  <label>Poder Total</label><input type="text" id="total" />
+<h3>Pontos</h3>
+<label>Pontos de Vida</label><input type="text" id="vida" />
+<label>Pontos de Estamina</label><input type="text" id="estamina" />
+<label>Pontos de Mana</label><input type="text" id="mana" />
 </div>
 
-<!-- Card 07: Resistência -->
 <div class="card">
-  <h3>Resistência</h3>
-  <label>Resistência Mágica</label><input type="text" id="resMagica" />
-  <label>Resistência Física</label><input type="text" id="resFisica" />
-  <label>Resistência Espiritual</label><input type="text" id="resEspiritual" />
-  <label>Resistência Psíquica</label><input type="text" id="resPsiquica" />
-  <label>Resistência Aurática</label><input type="text" id="resAuratica" />
-  <label>Resistência Total</label><input type="text" id="resTotal" />
+<h3>Recipientes & Lacrimas</h3>
+<label>Origem</label><input type="text" id="origem" />
+<label>Limite do Guino</label><input type="text" id="guino" />
+<label>Lacrima</label><input type="text" id="lacrima" />
 </div>
 
-<!-- Card 08: Reputações -->
+<h2>Estatísticas Físicas</h2>
+
+<!-- Card 04: Estatísticas Físicas -->
 <div class="card">
-  <h3>Reputações</h3>
-  <label>Reputação (Hanashi)</label><input type="text" id="repHanashi" />
-  <label>Reputação (Multiversal)</label><input type="text" id="repMultiversal" />
+<h3>Informações Físicas</h3>
+<label>Altura</label><input type="text" id="altura" />
+<label>Peso</label><input type="text" id="peso" />
+<label>Tipo Sanguíneo</label><input type="text" id="tiposangue" />
 </div>
 
-<!-- Card 09: Status Avançados -->
 <div class="card">
-  <h3>Status Avançados</h3>
-  <label>Consciência</label><input type="text" id="consciencia" />
-  <label>Desarmonia</label><input type="text" id="desarmonia" />
-  <label>Harmonia</label><input type="text" id="harmonia" />
-  <label>Energia</label><input type="text" id="energia" />
-  <label>Moralidade</label><input type="text" id="moralidade" />
-  <label>Influência</label><input type="text" id="stainfluencia" />
-  <label>Natureza</label><input type="text" id="natureza" />
-  <label>Percepção</label><input type="text" id="percepcao" />
-  <label>Situação</label><input type="text" id="situacao" />
-  <label>Temperamento</label><input type="text" id="temperamento" />
-  <label>Tempo</label><input type="text" id="tempo" />
-  <label>Transformação</label><input type="text" id="transformacao" />
+<h3>Aparência</h3>
+<label>Cor dos Olhos</label><input type="text" id="corolho" />
+<label>Cor do Cabelo</label><input type="text" id="corcabelo" />
+<label>Etnia</label><input type="text" id="etnia" />
+</div>
+
+<div class="card">
+<h3>Marcações</h3>
+<label>Tem Tatuagem?</label><input type="text" id="tatto" />
+<label>Tem Piercing?</label><input type="text" id="piercing" />
+</div>
+
+<div class="card">
+<h3>Sobre a Casca</h3>
+<label>Possui Casca Física?</label><input type="text" id="cascafisica" />
+<label>Essa é a sua Casca Original?</label><input type="text" id="cascaoriginal" />
+<label>Quantas Cascas você tem?</label><input type="text" id="quantascascas" />
+<label>O que você é?</label><input type="text" id="oquevocee" />
+</div>
+
+<div class="card">
+<h3>Descrição de Aparência</h3>
+<label>Descrição Abaixo</label><input type="text" id="descriaparencia" />
+</div>
+
+<h2>Estatísticas Físicas</h2>
+
+<!-- Card 05: Estatísticas Familiares -->
+<div class="card">
+<h3>Progenitores</h3>
+<label>Pai</label><input type="text" id="pai" />
+<label>Mãe</label><input type="text" id="mae" />
+<label>Guardião Leal</label><input type="text" id="guardiao" />
+</div>
+
+<div class="card">
+<h3>Irmãos</h3>
+<label>Tem Irmãos?</label><input type="text" id="temirmaos" />
+<label>Sua Posição de Nascimento</label><input type="text" id="posicaoentreosirmaos" />
+</div>
+
+<h2>Relacionamentos</h2>
+
+<!-- Card 06: Relacionamentos -->
+<div class="card">
+<h3>Relacionamentos Amorosos</h3>
+<label>Estado Civil</label><input type="text" id="estadocivil" />
+<label>Nome do Parceiro(a)</label><input type="text" id="nomeparceiro" />
+<label>História do Casal</label><input type="text" id="historiadocasal" />
+</div>
+
+<div class="card">
+<h3>Relacionamentos Familiares</h3>
+<label>Tem Filhos?</label><input type="text" id="temfilhos" />
+<label>Nome dos Filhos</label><input type="text" id="nomedosfilhos" />
+<label>Herdeiro(a)</label><input type="text" id="herdeiro" />
+</div>
+
+<h2>Informações Habitacionais</h2>
+
+<!-- Card 07: Informações Habitacionais -->
+<div class="card">
+<h3>Onde Mora</h3>
+<label>Reino</label><input type="text" id="reino" />
+<label>Dimensão</label><input type="text" id="dimensao" />
+<label>Dimensionalidade</label><input type="text" id="dimensionalidade" />
+<label>Mundo</label><input type="text" id="mundoondemora" />
+<label>Morada</label><input type="text" id="morada" />
+<label>Localização da Morada</label><input type="text" id="localmorada" />
+</div>
+
+<h2>Níveis & Status</h2>
+
+<!-- Card 08: Níveis & Status -->
+<div class="card">
+<h3>Status Básicos</h3>
+<label>Ameaça</label><input type="text" id="ameaca" />
+<label>Comunicação</label><input type="text" id="comunicacao" />
+<label>Conhecimento</label><input type="text" id="conhecimento" />
+<label>Desafio</label><input type="text" id="desafio" />
+<label>Destruição</label><input type="text" id="destruicao" />
+<label>Importância</label><input type="text" id="importancia" />
+<label>Imortalidade</label><input type="text" id="imortalidade" />
+<label>Influência</label><input type="text" id="influencia" />
+<label>Meritocracia</label><input type="text" id="meritocracia" />
+<label>Nível de XP</label><input type="text" id="xp" />
+<label>Nível de Procurado</label><input type="text" id="procurado" />
+<label>Renegeração</label><input type="text" id="regeneracao" />
+<label>Proficiência</label><input type="text" id="proficiencia" />
+</div>
+
+<div class="card">
+<h3>Ranking & Categoria</h3>
+<label>Ranking</label><input type="text" id="ranking" />
+<label>Categoria</label><input type="text" id="categoria" />
+</div>
+
+<div class="card">
+<h3>Hierarquia</h3>
+<label>Hierarquia Niktronial</label><input type="text" id="hierniktro" />
+<label>Hierarquia Militar</label><input type="text" id="hiermilitar" />
+<label>Hierarquia Multiversal</label><input type="text" id="hiermultiverso" />
+</div>
+
+<div class="card">
+<h3>Nível de Poder</h3>
+<label>Classe</label><input type="text" id="classe" />
+<label>Poder Mágico</label><input type="text" id="pm" />
+<label>Poder Físico</label><input type="text" id="pf" />
+<label>Poder Espiritual</label><input type="text" id="pe" />
+<label>Poder Psíquico</label><input type="text" id="pp" />
+<label>Poder Aurático</label><input type="text" id="pa" />
+<label>Poder Total</label><input type="text" id="pt" />
+</div>
+
+<div class="card">
+<h3>Nível de Resistência</h3>
+<label>Resistência Mágica</label><input type="text" id="rm" />
+<label>Resistência Física</label><input type="text" id="rf" />
+<label>Resistência Espiritual</label><input type="text" id="re" />
+<label>Resistência Psíquica</label><input type="text" id="rp" />
+<label>Resistência Aurática</label><input type="text" id="ra" />
+<label>Resistência Total</label><input type="text" id="rt" />
+</div>
+
+<div class="card">
+<h3>Reputações</h3>
+<label>Reputação (Hanashi)</label><input type="text" id="rephanashi" />
+<label>Reputação (Niktronial)</label><input type="text" id="repniktro" />
+<label>Reputação (Multiversal)</label><input type="text" id="repmultiverso" />
+</div>
+
+<div class="card">
+<h3>Status Avançados</h3>
+<label>Consciência</label><input type="text" id="consciencia" />
+<label>Desarmonia</label><input type="text" id="desarmonia" />
+<label>Energia</label><input type="text" id="energia" />
+<label>Harmonia</label><input type="text" id="harmonia" />
+<label>Influência</label><input type="text" id="influencias" />
+<label>Moralidade</label><input type="text" id="moralidade" />
+<label>Natureza</label><input type="text" id="natureza" />
+<label>Percepção</label><input type="text" id="percepcao" />
+<label>Situação</label><input type="text" id="situacao" />
+<label>Temperamento</label><input type="text" id="temperamento" />
+<label>Tempo</label><input type="text" id="tempo" />
+<label>Transformação</label><input type="text" id="transformacao" />
+</div>
+
+<h2>Afiliações, Cargos & Títulos</h2>
+
+<!-- Card 09: Afiliações, Cargos & Títulos -->
+<div class="card">
+<h3>Afiliações</h3>
+<label>Slot 1</label><input type="text" id="af1" />
+<label>Slot 2</label><input type="text" id="af2" />
+<label>Slot 3</label><input type="text" id="af3" />
+<label>Slot 4</label><input type="text" id="af4" />
+<label>Slot 5</label><input type="text" id="af5" />
+</div>
+
+<div class="card">
+<h3>Cargos</h3>
+<label>Slot 1</label><input type="text" id="car1" />
+<label>Slot 2</label><input type="text" id="car2" />
+<label>Slot 3</label><input type="text" id="car3" />
+<label>Slot 4</label><input type="text" id="car4" />
+<label>Slot 5</label><input type="text" id="car5" />
+</div>
+
+<div class="card">
+<h3>Títulos</h3>
+<label>Slot 1</label><input type="text" id="tit1" />
+<label>Slot 2</label><input type="text" id="tit2" />
+<label>Slot 3</label><input type="text" id="tit3" />
+<label>Slot 4</label><input type="text" id="tit4" />
+<label>Slot 5</label><input type="text" id="tit5" />
+</div>
+
+<h2>Magia</h2>
+
+<!-- Card 10: Magia -->
+<div class="card">
+<h3>Informações sobre a Magia</h3>
+<label>Nome da Magia</label><input type="text" id="nomemagia" />
+<label>Classe</label><input type="text" id="classemagia" />
+<label>Tipo</label><input type="text" id="tipomagia" />
+<label>Classificação</label><input type="text" id="classifmagia" />
+<label>Afinidade Elemental</label><input type="text" id="afinidademagia" />
+<label>Descrição da Magia</label><input type="text" id="descricaomagia" />
+</div>
+
+<div class="card">
+<h3>Árvore de Yeknor</h3>
+<label>Reknor (Magia Pessoal)</label><input type="text" id="1" />
+<label>Kirun (Feitiço)</label><input type="text" id="2" />
+<label>Arik (Encantamento)</label><input type="text" id="3" />
+<label>Trinar (Azaração)</label><input type="text" id="4" />
+<label>Krinar (Azaração Potente)</label><input type="text" id="5" />
+<label>Luckya (Maldição)</label><input type="text" id="6" />
+<label>Dyntro (P.D.C)</label><input type="text" id="7" />
+<label>Pyentro (Ataque)</label><input type="text" id="8" />
+<label>Arinkir (Contra-Ataque)</label><input type="text" id="9" />
+<label>Endron (Habilidade Mágica)</label><input type="text" id="10" />
+</div>
+
+<h2>Armamento</h2>
+
+<!-- Card 10: Armamento -->
+<div class="card">
+<h3>Informações sobre o Armamento</h3>
+<label>Nome do Armamento</label><input type="text" id="nomearma" />
+<label>Classe</label><input type="text" id="classearma" />
+<label>Natureza</label><input type="text" id="natuarma" />
+<label>Habilidade Especial</label><input type="text" id="habiarma" />
+<label>Tipo</label><input type="text" id="tipoarma" />
+<label>Afinidade Elemental</label><input type="text" id="afinidadearma" />
+<label>Descrição do Armamento</label><input type="text" id="descricaoarma" />
+</div>
+
+<h2>Habilidade Única & Hereditária</h2>
+
+<!-- Card 11: Habilidade Única & Hereditária -->
+
+<div class="card">
+<h3>Habilidade Única</h3>
+<label>Nome</label><input type="text" id="nomeunico" />
+<label>Descrição</label><input type="text" id="descricaounico" />
+</div>
+
+<div class="card">
+<h3>Habilidade Hereditária</h3>
+<label>Nome</label><input type="text" id="nomehere" />
+<label>Descrição</label><input type="text" id="descricaohere" />
+</div>
+
+<h2>Afinidade Elemental</h2>
+
+<!-- Card 12: Afinidade Elemental -->
+
+<div class="card">
+<h3>Elementos Primários</h3>
+<label>Fogo</label><input type="text" id="fogo" />
+<label>Água</label><input type="text" id="agua" />
+<label>Terra</label><input type="text" id="terra" />
+<label>Ar</label><input type="text" id="ar" />
+<label>Luz</label><input type="text" id="luz" />
+<label>Escuridão</label><input type="text" id="escuridao" />
+</div>
+
+<div class="card">
+<h3>Elementos Secundários</h3>
+<label>Vida</label><input type="text" id="vidamagi" />
+<label>Morte</label><input type="text" id="morte" />
+<label>Natureza</label><input type="text" id="natureza" />
+<label>Metal</label><input type="text" id="metal" />
+<label>Celestial</label><input type="text" id="celestial" />
+<label>Magnetismo</label><input type="text" id="magnetismo" />
+<label>Gravidade</label><input type="text" id="gravidade" />
+<label>Eletricidade</label><input type="text" id="eletricidade" />
+<label>Gelo</label><input type="text" id="gelo" />
+<label>Vácuo</label><input type="text" id="vacuo" />
+<label>Veneno</label><input type="text" id="veneno" />
+<label>Cristal</label><input type="text" id="cristal" />
+<label>Tempo</label><input type="text" id="tempo" />
+<label>Espaço</label><input type="text" id="espaco" />
+</div>
+
+<div class="card">
+<h3>Elementos Raros</h3>
+<label>Sangue</label><input type="text" id="sangue" />
+<label>Arcano</label><input type="text" id="arcano" />
+<label>Antimagia</label><input type="text" id="antimagia" />
 </div>
 
 <!-- Botão final -->
