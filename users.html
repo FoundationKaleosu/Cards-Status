@@ -185,82 +185,272 @@
       const cards = [];
 
       cards.push(criarCard("Identificação do Usuário", {
-        "ID": id
+        "Indentificação": id
       }));
 
-      cards.push(criarCard("Informações Pessoais", {
-        "Nome Completo": p.nomeCompleto,
-        "Idade": p.idade,
-        "Reino de Origem": p.reinoOrigem,
-        "Mundo de Origem": p.mundoOrigem,
-        "Reino Atual": p.reinoAtual
-      }));
+cards.push(criarCard("Informações Pessoais", {
+  "Nome Completo": p.nomecompleto,
+  "Apelido": p.apelido,
+  "Idade": p.idade,
+  "Niktro": p.niktro,
+  "Gênero": p.genero,
+  "Opção Sexual": p.opcaosexual,
+  "Religião": p.religiao,
+  "É o Familiar de Alguém?": p.familiar
+}));
 
-      cards.push(criarCard("Status Básicos", {
-        "Ameaça": p.ameaca,
-        "Comunicação": p.comunicacao,
-        "Conhecimento": p.conhecimento,
-        "Desafio": p.desafio,
-        "Destruição": p.destruicao,
-        "Importância": p.importancia,
-        "Imortalidade": p.imortalidade,
-        "Influência": p.influencia,
-        "Meritocracia": p.meritocracia,
-        "XP": p.xp,
-        "Procurado": p.procurado,
-        "Regeneração": p.regeneracao,
-        "Proficiência": p.proficiencia
-      }));
+cards.push(criarCard("Data de Nascimento", {
+  "Ethernnium": p.ethernnium,
+  "Era": p.era,
+  "Período": p.periodo,
+  "Subperíodo": p.subperiodo,
+  "Ano": p.ano,
+  "Mês": p.mes,
+  "Dia": p.dia
+}));
 
-      cards.push(criarCard("Ranking & Categoria", {
-        "Ranking": p.ranking,
-        "Categoria": p.categoria
-      }));
+cards.push(criarCard("Local de Origem", {
+  "Reino Originário": p.reinorigem,
+  "Mundo": p.mundo,
+  "Reino Atual": p.reinoatual
+}));
 
-        cards.push(criarCard("Hierarquia", {
-        "Hierarquia Niktronial": p.hierniktronial,
-        "Hierarquia Militar": p.hiermilitar,
-        "Hierarquia Multiversal": p.hiermultiversal
-      }));
+cards.push(criarCard("Estatísticas Mágicas - Pontos", {
+  "Pontos de Vida": p.vida,
+  "Pontos de Estamina": p.estamina,
+  "Pontos de Mana": p.mana
+}));
 
-      cards.push(criarCard("Nível de Poder", {
-        "Classe": p.classe,
-        "Poder Mágico": p.magico,
-        "Poder Físico": p.fisico,
-        "Poder Espiritual": p.espiritual,
-        "Poder Psíquico": p.psiquico,
-        "Poder Aurático": p.auratico,
-        "Poder Total": p.total
-      }));
+cards.push(criarCard("Estatísticas Mágicas - Recipientes & Lacrimas", {
+  "Origem": p.origem,
+  "Limite do Guino": p.guino,
+  "Lacrima": p.lacrima
+}));
 
-      cards.push(criarCard("Resistência", {
-        "Resistência Mágica": p.resMagica,
-        "Resistência Física": p.resFisica,
-        "Resistência Espiritual": p.resEspiritual,
-        "Resistência Psíquica": p.resPsiquica,
-        "Resistência Aurática": p.resAuratica,
-        "Resistência Total": p.resTotal
-      }));
+cards.push(criarCard("Estatísticas Físicas - Informações Físicas", {
+  "Altura": p.altura,
+  "Peso": p.peso,
+  "Tipo Sanguíneo": p.tiposangue
+}));
 
-      cards.push(criarCard("Reputações", {
-        "Hanashi": p.repHanashi,
-        "Multiversal": p.repMultiversal
-      }));
+cards.push(criarCard("Estatísticas Físicas - Aparência", {
+  "Cor dos Olhos": p.corolho,
+  "Cor do Cabelo": p.corcabelo,
+  "Etnia": p.etnia
+}));
 
-      cards.push(criarCard("Status Avançados", {
-        "Consciência": p.consciencia,
-        "Desarmonia": p.desarmonia,
-        "Harmonia": p.harmonia,
-        "Energia": p.energia,
-        "Moralidade": p.moralidade,
-        "Influência": p.stainfluencia,
-        "Natureza": p.natureza,
-        "Percepção": p.percepcao,
-        "Situação": p.situacao,
-        "Temperamento": p.temperamento,
-        "Tempo": p.tempo,
-        "Transformação": p.transformacao
-      }));
+cards.push(criarCard("Estatísticas Físicas - Marcações", {
+  "Tem Tatuagem?": p.tatto,
+  "Tem Piercing?": p.piercing
+}));
+
+cards.push(criarCard("Estatísticas Físicas - Sobre a Casca", {
+  "Possui Casca Física?": p.cascafisica,
+  "Essa é a sua Casca Original?": p.cascaoriginal,
+  "Quantas Cascas você tem?": p.quantascascas,
+  "O que você é?": p.oquevocee
+}));
+
+cards.push(criarCard("Estatísticas Físicas - Descrição de Aparência", {
+  "Descrição Abaixo": p.descriaparencia
+}));
+
+cards.push(criarCard("Estatísticas Familiares - Progenitores", {
+  "Pai": p.pai,
+  "Mãe": p.mae,
+  "Guardião Leal": p.guardiao
+}));
+
+cards.push(criarCard("Estatísticas Familiares - Irmãos", {
+  "Tem Irmãos?": p.temirmaos,
+  "Sua Posição de Nascimento": p.posicaoentreosirmaos
+}));
+
+cards.push(criarCard("Relacionamentos - Relacionamentos Amorosos", {
+  "Estado Civil": p.estadocivil,
+  "Nome do Parceiro(a)": p.nomeparceiro,
+  "História do Casal": p.historiadocasal
+}));
+
+cards.push(criarCard("Relacionamentos - Relacionamentos Familiares", {
+  "Tem Filhos?": p.temfilhos,
+  "Nome dos Filhos": p.nomedosfilhos,
+  "Herdeiro(a)": p.herdeiro
+}));
+
+cards.push(criarCard("Informações Habitacionais - Onde Mora", {
+  "Reino": p.reino,
+  "Dimensão": p.dimensao,
+  "Dimensionalidade": p.dimensionalidade,
+  "Mundo": p.mundoondemora,
+  "Morada": p.morada,
+  "Localização da Morada": p.localmorada
+}));
+
+cards.push(criarCard("Níveis & Status - Status Básicos", {
+  "Ameaça": p.ameaca,
+  "Comunicação": p.comunicacao,
+  "Conhecimento": p.conhecimento,
+  "Desafio": p.desafio,
+  "Destruição": p.destruicao,
+  "Importância": p.importancia,
+  "Imortalidade": p.imortalidade,
+  "Influência": p.influencia,
+  "Meritocracia": p.meritocracia,
+  "Nível de XP": p.xp,
+  "Nível de Procurado": p.procurado,
+  "Renegeração": p.regeneracao,
+  "Proficiência": p.proficiencia
+}));
+
+cards.push(criarCard("Níveis & Status - Ranking & Categoria", {
+  "Ranking": p.ranking,
+  "Categoria": p.categoria
+}));
+
+cards.push(criarCard("Níveis & Status - Hierarquia", {
+  "Hierarquia Niktronial": p.hierniktro,
+  "Hierarquia Militar": p.hiermilitar,
+  "Hierarquia Multiversal": p.hiermultiverso
+}));
+
+cards.push(criarCard("Níveis & Status - Nível de Poder", {
+  "Classe": p.classe,
+  "Poder Mágico": p.pm,
+  "Poder Físico": p.pf,
+  "Poder Espiritual": p.pe,
+  "Poder Psíquico": p.pp,
+  "Poder Aurático": p.pa,
+  "Poder Total": p.pt
+}));
+
+cards.push(criarCard("Níveis & Status - Nível de Resistência", {
+  "Resistência Mágica": p.rm,
+  "Resistência Física": p.rf,
+  "Resistência Espiritual": p.re,
+  "Resistência Psíquica": p.rp,
+  "Resistência Aurática": p.ra,
+  "Resistência Total": p.rt
+}));
+
+cards.push(criarCard("Níveis & Status - Reputações", {
+  "Reputação (Hanashi)": p.rephanashi,
+  "Reputação (Niktronial)": p.repniktro,
+  "Reputação (Multiversal)": p.repmultiverso
+}));
+
+cards.push(criarCard("Níveis & Status - Status Avançados", {
+  "Consciência": p.consciencia,
+  "Desarmonia": p.desarmonia,
+  "Energia": p.energia,
+  "Harmonia": p.harmonia,
+  "Influência": p.influencias,
+  "Moralidade": p.moralidade,
+  "Natureza": p.natureza,
+  "Percepção": p.percepcao,
+  "Situação": p.situacao,
+  "Temperamento": p.temperamento,
+  "Tempo": p.tempo,
+  "Transformação": p.transformacao
+}));
+
+cards.push(criarCard("Afiliações, Cargos & Títulos - Afiliações", {
+  "Slot 1": p.af1,
+  "Slot 2": p.af2,
+  "Slot 3": p.af3,
+  "Slot 4": p.af4,
+  "Slot 5": p.af5
+}));
+
+cards.push(criarCard("Afiliações, Cargos & Títulos - Cargos", {
+  "Slot 1": p.car1,
+  "Slot 2": p.car2,
+  "Slot 3": p.car3,
+  "Slot 4": p.car4,
+  "Slot 5": p.car5
+}));
+
+cards.push(criarCard("Afiliações, Cargos & Títulos - Títulos", {
+  "Slot 1": p.tit1,
+  "Slot 2": p.tit2,
+  "Slot 3": p.tit3,
+  "Slot 4": p.tit4,
+  "Slot 5": p.tit5
+}));
+
+cards.push(criarCard("Magia - Informações sobre a Magia", {
+  "Nome da Magia": p.nomemagia,
+  "Classe": p.classemagia,
+  "Tipo": p.tipomagia,
+  "Classificação": p.classifmagia,
+  "Afinidade Elemental": p.afinidademagia,
+  "Descrição da Magia": p.descricaomagia
+}));
+
+cards.push(criarCard("Magia - Árvore de Yeknor", {
+  "Reknor (Magia Pessoal)": p["1"],
+  "Kirun (Feitiço)": p["2"],
+  "Arik (Encantamento)": p["3"],
+  "Trinar (Azaração)": p["4"],
+  "Krinar (Azaração Potente)": p["5"],
+  "Luckya (Maldição)": p["6"],
+  "Dyntro (P.D.C)": p["7"],
+  "Pyentro (Ataque)": p["8"],
+  "Arinkir (Contra-Ataque)": p["9"],
+  "Endron (Habilidade Mágica)": p["10"]
+}));
+
+cards.push(criarCard("Armamento - Informações sobre o Armamento", {
+  "Nome do Armamento": p.nomearma,
+  "Classe": p.classearma,
+  "Natureza": p.natuarma,
+  "Habilidade Especial": p.habiarma,
+  "Tipo": p.tipoarma,
+  "Afinidade Elemental": p.afinidadearma,
+  "Descrição do Armamento": p.descricaoarma
+}));
+
+cards.push(criarCard("Habilidade Única & Hereditária - Habilidade Única", {
+  "Nome": p.nomeunico,
+  "Descrição": p.descricaounico
+}));
+
+cards.push(criarCard("Habilidade Única & Hereditária - Habilidade Hereditária", {
+  "Nome": p.nomehere,
+  "Descrição": p.descricaohere
+}));
+
+cards.push(criarCard("Afinidade Elemental - Elementos Primários", {
+  "Fogo": p.fogo,
+  "Água": p.agua,
+  "Terra": p.terra,
+  "Ar": p.ar,
+  "Luz": p.luz,
+  "Escuridão": p.escuridao
+}));
+
+cards.push(criarCard("Afinidade Elemental - Elementos Secundários", {
+  "Vida": p.vidamagi,
+  "Morte": p.morte,
+  "Natureza": p.natureza,
+  "Metal": p.metal,
+  "Celestial": p.celestial,
+  "Magnetismo": p.magnetismo,
+  "Gravidade": p.gravidade,
+  "Eletricidade": p.eletricidade,
+  "Gelo": p.gelo,
+  "Vácuo": p.vacuo,
+  "Veneno": p.veneno,
+  "Cristal": p.cristal,
+  "Tempo": p.tempo,
+  "Espaço": p.espaco
+}));
+
+cards.push(criarCard("Afinidade Elemental - Elementos Raros", {
+  "Sangue": p.sangue,
+  "Arcano": p.arcano,
+  "Antimagia": p.antimagia
+}));
 
       detalhes.innerHTML = cards.join("");
       btnExport.style.display = 'block';
