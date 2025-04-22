@@ -156,7 +156,7 @@
     snapshot.forEach(child => {
       const p = child.val();
       const id = child.key;
-      const nome = p.nomecompleto || "Sem Nome";
+      const nome = p.nomeCompleto || "Sem Nome";
       const option = document.createElement("option");
       option.value = id;
       option.textContent = nome;
@@ -189,7 +189,7 @@
       }));
 
 cards.push(criarCard("Informações Pessoais", {
-  "Nome Completo": p.nomecompleto,
+  "Nome Completo": p.nomeCompleto,
   "Apelido": p.apelido,
   "Idade": p.idade,
   "Niktro": p.niktro,
